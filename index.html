@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tic-Tac-Toe</title>
+		<link
+			rel="shortcut icon"
+			href="./New folder/logo.png"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="./dist/css/bootstrap.css" />
+	</head>
+	<body class="bg-dark text-light">
+		<div
+			class="cover d-flex justify-content-center align-items-center fixed-top"
+			id="cover-container"
+		></div>
+		<div class="container-md">
+			<div
+				class="row justify-content-center align-items-center g-3"
+				style="min-height: 100dvh"
+			>
+				<div class="col-12 col-md-8 col-lg-7">
+					<h3 class="d-flex justify-content-start align-content-center">
+						<span class="me-2">
+							<img
+								src="./New folder/logo.png"
+								width="30"
+								height="30"
+								class="d-inline-block align-text-top"
+							/>
+						</span>
+						Tic-Tac-toe
+					</h3>
+					<div class="d-flex justify-content-between align-items-center">
+						<div>
+							<label for="player">Play Type</label>
+							<select
+								name="playType"
+								id="player"
+								class="form-control bg-dark text-light"
+								style="width: fit-content !important"
+							>
+								<option value="pc">Player vs Computer</option>
+								<option value="pp">Player vs Player</option>
+							</select>
+						</div>
+						<div>
+							<label for="rounds">Play Rounds</label>
+							<select
+								name="playType"
+								id="playRounds"
+								class="form-control bg-dark text-light"
+								style="width: fit-content !important"
+							>
+								<option value="1">1 Round</option>
+								<option value="3">3 Rounds</option>
+								<option value="5">5 Rounds</option>
+							</select>
+						</div>
+					</div>
+					<!--  -->
+					<div class="mt-5">
+						<table class="mx-auto shadow py-2 px-4 bg-secondary rounded">
+							<tr>
+								<td
+									id="c0"
+									class="h2 p-2 border xo border-1 text-center"
+									onclick="select(0)"
+									style="width: 3rem; height: 3rem; cursor: pointer"
+								>
+									X
+								</td>
+								<td
+									id="c1"
+									class="h2 p-2 border xo border-1 text-center"
+									onclick="select(1)"
+									style="width: 3rem; height: 3rem; cursor: pointer"
+								>
+									X
+								</td>
+								<td
+									id="c2"
+									class="h2 p-2 border xo border-1 text-center"
+									onclick="select(2)"
+									style="width: 3rem; height: 3rem; cursor: pointer"
+								>
+									X
+								</td>
+							</tr>
+							<tr>
+								<td
+									id="c3"
+									class="h2 p-2 border xo border-1 text-center"
+									onclick="select(3)"
+									style="width: 3rem; height: 3rem; cursor: pointer"
+								>
+									X
+								</td>
+								<td
+									id="c4"
+									class="h2 p-2 border xo border-1 text-center"
+									onclick="select(4)"
+									style="width: 3rem; height: 3rem; cursor: pointer"
+								>
+									X
+								</td>
+								<td
+									id="c5"
+									class="h2 p-2 border xo border-1 text-center"
+									onclick="select(5)"
+									style="width: 3rem; height: 3rem; cursor: pointer"
+								>
+									X
+								</td>
+							</tr>
+							<tr>
+								<td
+									id="c6"
+									class="h2 p-2 border xo border-1 text-center"
+									onclick="select(6)"
+									style="width: 3rem; height: 3rem; cursor: pointer"
+								>
+									X
+								</td>
+								<td
+									id="c7"
+									class="h2 p-2 border xo border-1 text-center"
+									onclick="select(7)"
+									style="width: 3rem; height: 3rem; cursor: pointer"
+								>
+									X
+								</td>
+								<td
+									id="c8"
+									class="h2 p-2 border xo border-1 text-center"
+									onclick="select(8)"
+									style="width: 3rem; height: 3rem; cursor: pointer"
+								>
+									X
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="mt-5">
+						<div class="w-100 border-2 border-start border-bottom border-end text-center" id="wTurn"></div>
+						<div class="d-flex justify-content-center align-items-center">
+							<h2>X</h2>
+							<small class="mx-3">vs</small>
+							<h2>O</h2>
+						</div>
+						<div class="d-flex justify-content-center align-items-center">
+							<h2 id="x-score">0</h2>
+							<small class="mx-3">--</small>
+							<h2 id="o-score">0</h2>
+						</div>
+					</div>
+					<div class="text-center">
+						<button
+							class="btn m-auto text-light"
+							onclick="refresh()"
+							draggable="true"
+						>
+							Refresh
+						</button>
+					</div>
+					<div id="records"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./index.js"></script>
+</html>
